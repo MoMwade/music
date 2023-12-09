@@ -30,7 +30,7 @@
             <!--  :tooltip="'none'" -->
             {{mixin_player.currentplaytim}}
             {{mixin_player.howl.duration()}}
-            <vue-slider @drag-end="fn(mixin_player.currentplaytime)" v-model="mixin_player.currentplaytime" :min=0 :max="mixin_player.howl.duration()" :interval='0.01'  :disabled="false" :dragOnClick="true"></vue-slider>
+            <vue-slider @change="fn(mixin_player.currentplaytime)" :lazy="true" v-model="mixin_player.currentplaytime" :min=0 :max="mixin_player.howl.duration()" :interval='0.01'  :disabled="false" :dragOnClick="true"></vue-slider>
         </div>
     </div>
 </template>
