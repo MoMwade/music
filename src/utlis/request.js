@@ -4,7 +4,7 @@ import axiosRetry from 'axios-retry'
 import store from '@/store'
 // axios.create返回一个新的axios的实例
 const request = axios.create({
-    baseURL:"http://localhost:3000",//改变基础请求地址
+    baseURL:"http://111.229.247.11:3000/",//改变基础请求地址
     timeout:5000  //5000毫秒不返回数据直接断开请求
 })
 // _axios 和 axios 99%功能一致
