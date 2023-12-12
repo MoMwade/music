@@ -11,7 +11,7 @@ export default class {
     constructor() {
         this.tracks = []; //歌单歌曲ID集合
         this.index = 0; //播放歌曲索引
-        this.loopMode = 0; // 播放模式 0单曲循环 1列表循环
+        this.loopMode = 1; // 播放模式 1单曲循环 0列表循环
         this.howl = null; //存储Howl实例
         this.CurrentTrackDetails = {}; //当前歌单详情
         this.playing = false, //播放器的播放状态
@@ -80,6 +80,8 @@ export default class {
 
     //获取需要播放的trackid
     platNectTrack(){
+        this.currentplaytime = 0
+        this.pause()
         const nextTrack = this.getNextTrack();
         this.playTrack(nextTrack)
     }

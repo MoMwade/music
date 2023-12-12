@@ -2,7 +2,7 @@
     <div>
          <div>
             <div class="h-[15vw]"></div>
-            <div class="w-[100vw] h-[15vw] flex items-center bg-white dark:bg-[#2C2C2C] dark:text-[#ccc] fixed" :style="{bottom:0}">
+            <div class="w-[100vw] h-[15vw] border-t-[0.1vw] flex items-center bg-white dark:bg-[#2C2C2C] dark:text-[#ccc] fixed" :style="{bottom:0}">
                 <div class="w-[90%] h-[15vw] m-auto flex justify-between items-center">
                     <router-link to="/phonograph" tag="div">
                         <div class="flex items-center">

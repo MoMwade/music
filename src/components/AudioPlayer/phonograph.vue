@@ -27,10 +27,18 @@
                 <Icon icon="uil:comment-message" />
                 <Icon icon="ri:more-2-fill" />
             </div>
-            <!--  :tooltip="'none'" -->
-            {{mixin_player.currentplaytim}}
-            {{mixin_player.howl.duration()}}
-            <vue-slider @change="fn(mixin_player.currentplaytime)" :lazy="true" v-model="mixin_player.currentplaytime" :min=0 :max="mixin_player.howl.duration()" :interval='0.01'  :disabled="false" :dragOnClick="true"></vue-slider>
+            <div class="pt-[3vw] pb-[3vw]">
+                <vue-slider @change="fn(mixin_player.currentplaytime)" :tooltip="'none'" :drag-on-click="true" :lazy="true" v-model="mixin_player.currentplaytime" :silent='true' :min=0 :max="mixin_player.howl.duration()" :interval='0.01'  :disabled="false" :dragOnClick="true"></vue-slider>
+            </div>
+            <div class="text-[7vw] flex justify-between items-center">
+                <Icon icon="solar:repeat-one-line-duotone" />
+                <Icon icon="ph:skip-forward-fill" :rotate="2" />
+                <div @click="mixin_player.toggle()" class="relative w-[12vw] h-[12vw] bg-white rounded-[50%]">
+                    <Icon :icon="mixin_player.playing?'lets-icons:stop-fill':'ic:round-play-arrow'" class="text-[5vw] text-[#000] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+                </div>
+                <Icon icon="ph:skip-forward-fill" />
+                <Icon icon="icon-park-solid:menu-fold-one" />
+            </div>
         </div>
     </div>
 </template>
@@ -44,7 +52,7 @@ export default {
     },
     methods:{
         fn(value){
-            this.mixin_player.howl.seek(value) 
+            this.mixin_player.howl.seek(value)
         }
     },
     mounted(){

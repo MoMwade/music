@@ -2,14 +2,14 @@
     <div class="dark:bg-black">
         <div class="flex justify-around items-center w-[100%] h-[18vw] dark:text-[#ccc]">
             <div @click="showPopup">
-                <Icon icon="material-symbols:menu" class="text-[10vw] dark:text-[#ccc] text-black" />
+                <Icon icon="material-symbols:menu" class="text-[7vw] dark:text-[#ccc] text-black" />
             </div>
             <div class="relative w-[68%]">
                 <Icon icon="iconamoon:search-duotone" color="darkgray" class="text-[5vw] absolute left-[3vw] top-[25%]"/>
                 <input type="text" placeholder="Love IS Gone(Acoustic)" class="w-[100%] h-[10vw] pl-[10vw] rounded-[5vw] border-solid border-[0.6vw] border-indigo-200 outline-none text-[4vw]">
                 <Icon icon="tabler:line-scan" color="darkgray" class="text-[5vw] absolute right-[3vw] top-[25%]" />
             </div>
-            <Icon icon="solar:microphone-large-bold-duotone" class="text-[10vw]" />
+            <Icon icon="solar:microphone-large-bold-duotone" class="text-[7vw]" />
         </div>
         <van-popup 
         v-model="show"

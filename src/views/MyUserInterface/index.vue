@@ -33,14 +33,14 @@
         <div class="w-[90vw] m-auto mt-[8vw] bg-white dark:bg-[#2C2C2C] rounded-[2vw]">
             <div class="flex justify-around flex-wrap p-[2vw]">
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="carbon:play-filled" color="red" class="text-[8vw]"/>
+                    <Icon icon="carbon:play-filled" color="red" class="text-[7.2vw]"/>
                     <p class="text-[2.6vw]">最近播放</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%] relative">
                     <div class="absolute left-[2vw] bottom-[1.2vw]">
                         <Icon icon="emojione-monotone:new-moon" color="red" class="text-[1vw]" />
                     </div>
-                    <Icon icon="arcticons:music-downloader" color="red" class="text-[8vw]"/>
+                    <Icon icon="arcticons:music-downloader" color="red" class="text-[7vw]"/>
                     <p class="text-[2.6vw]">本地下载</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
@@ -48,23 +48,23 @@
                     <p class="text-[2.6vw]">云盘</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="mdi:shopping" color="red" class="text-[8vw]"/>
+                    <Icon icon="mdi:shopping" color="red" class="text-[7vw]"/>
                     <p class="text-[2.6vw]">已购</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="fa-solid:user-friends" color="red" class="text-[8vw]"/>
+                    <Icon icon="fa-solid:user-friends" color="red" class="text-[6vw]"/>
                     <p class="text-[2.6vw]">我的好友</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="ph:star-fill" color="red" class="text-[8vw]"/>
+                    <Icon icon="ph:star-fill" color="red" class="text-[6vw]"/>
                     <p class="text-[2.6vw]">收藏和赞</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="icomoon-free:podcast" color="red" class="text-[8vw]"/>
+                    <Icon icon="icomoon-free:podcast" color="red" class="text-[6vw]"/>
                     <p class="text-[2.6vw]">我的播客</p>
                 </div>
                 <div class="flex flex-col items-center w-[22%]">
-                    <Icon icon="bi:heart-half" color="red" class="text-[8vw]"/>
+                    <Icon icon="bi:heart-half" color="red" class="text-[6vw]"/>
                     <p class="text-[2.6vw]">乐迷团</p>
                 </div>
             </div>

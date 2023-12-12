@@ -55,8 +55,8 @@
                     </Scroll>
                 </div>
             </div>
-                <div class=" absolute right-[5vw] top-[14vw]" @click="similar">
-                    <Icon icon="ei:arrow-down" color="white" class="text-[8vw]" />
+                <div class=" absolute right-[5vw] top-[14vw]" :class="{angle:similarSong}" @click="similar">
+                    <Icon icon="ei:arrow-down" color="white" class="text-[8vw]"  />
                 </div>
             <div class="flex justify-between items-center p-[5vw] whitespace-nowrap text-[3vw]">
                 <p class="w-[90%] overflow-hidden text-slate-200 opacity-90">{{playlist.description}}</p>
@@ -92,10 +92,10 @@
             <div class="bg-white">
                 <div class="w-[90vw] m-auto pt-[4vw]">
                     <div v-for="(item,index) in songs" :key="index+1" @click="putOn(item.id)">
-                        <div class="flex justify-between items-center mb-[3vw] text-[#ccc]">
+                        <div :class="{acitve:index == mixin_player.index}" class="flex justify-between items-center mb-[3vw] text-[#ccc]">
                             <p class="w-[5vw]">{{index+1}}</p>
-                            <div class="w-[60%] text-[3.5vw]">
-                                <p class=" text-black">{{item.name}}</p>
+                            <div class="w-[60%] text-[3.5vw]" :class="{acitve:index == mixin_player.index}">
+                                <p class="text-black">{{item.name}}</p>
                                 <p class="text-[3vw]">{{item.ar[0].name}}</p>
                             </div>
                             <Icon icon="bi:play-btn" color="#ccc" />
@@ -104,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <AudioPlayer :class="{displaypanel:playfomr}" class="panel"></AudioPlayer>
+            <AudioPlayer class="panel"></AudioPlayer>
         </div>
         
     </div>
@@ -120,7 +120,7 @@ export default {
             creator:{},
             flag:false,
             playlists:[],
-            similarSong :false,
+            similarSong:false,
             playfomr:true,
         }
     },
@@ -192,6 +192,10 @@ export default {
         padding: 1vw 1.5vw;
     }
 
+    .acitve > * {
+        color: rgb(255, 0, 0) !important;
+    }
+
     .starBg {
        background-color: rgba(240, 105, 105, 0.8);
         border-radius: 5vw;
@@ -202,8 +206,8 @@ export default {
         transition: all 3s;
     }
 
-    .displaypanel{
-        opacity: 0;
+    .angle {
+        transform: rotate(180deg);
     }
 
     @keyframes RunningLantern {
